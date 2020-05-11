@@ -1,0 +1,25 @@
+﻿<Window x:Class="TopHope.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+        xmlns:local="clr-namespace:TopHope"
+        mc:Ignorable="d"
+        Title="TopHope" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Visibility="Visible" BorderBrush="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}" Height="231" Width="621">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <Grid Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Name="Main" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" NavigationUIVisibility="Hidden"/>
+            <StackPanel Grid.Row="0" Orientation="Vertical" VerticalAlignment="Top">
+                <Button Name="MenuLogin" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" Padding="35,1,34,1" Grid.Column="0" Click="Button_Click_menuLogin"/>
+                <Button Name="MenuChecker" Content="Cheker" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" Padding="30,1,30,1" Grid.Column="0" Click="Button_Click_menuCheker"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Window>

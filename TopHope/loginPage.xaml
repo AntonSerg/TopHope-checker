@@ -1,0 +1,35 @@
+﻿<Page x:Class="TopHope.loginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TopHope"
+      mc:Ignorable="d"
+      Title="loginPage" Height="159.023" Width="642.668">
+
+    <Grid Margin="0,0,136,0" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
+            <TextBox Name="loginTextBox" Text="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Padding="1,1,1,1" MinWidth="100" MaxWidth="100"/>
+            <PasswordBox Name="PasswordTextBox" DataContext="password" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0"  Padding="1,1,1,1" MinWidth="100" MaxWidth="100"/>
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Padding="25,1,25,1" Click="Button_Click_login"/>
+                <Button x:Name="logoutButton" Content="Logout" Margin="30,10,0,0" Padding="20,1,15,1" VerticalAlignment="Top" HorizontalAlignment="Center" Click="Button_Click_logout"/>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Name="userImage" Width="125" Height="125" Margin="10,10,10,10"/>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <Label Name="nickName" Content="Nickname" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5,10,10,2"/>
+                <Label Name="messages" Content="Messages" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5,2,10,2"/>
+                <Label Name="thanks" Content="ThanksPoints" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5,2,10,2"/>
+                <Label Name="points" Content="PlusPoints" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5,2,10,2"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>
